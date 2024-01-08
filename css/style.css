@@ -2,7 +2,18 @@
 Author: W3layouts
 Author URL: http://w3layouts.com
  */
-html {
+
+ @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+ :root{
+    --secondary-color: #1d1d1d;
+    --primary-color: #053b60;
+ }
+
+
+ html {
     scroll-behavior: smooth;
 }
 
@@ -10,8 +21,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans JP', sans-serif;
-}
+    font-family: 'Rubik', sans-serif;}
 
 * {
     box-sizing: border-box;
@@ -43,8 +53,7 @@ input,
 select {
     -webkit-appearance: none;
     outline: none;
-    font-family: 'Noto Sans JP', sans-serif;
-}
+    font-family: 'Rubik', sans-serif;}
 
 button,
 .btn,
@@ -158,7 +167,12 @@ button:hover {
 
 /*--//wrapper--*/
 .coming-page-infohny {
-    background: url(../images/bg.jpg) no-repeat center;
+    background-color:hsla(16,0%,100%,1);
+    background-image:radial-gradient(at 83% 70%, hsla(186,67%,67%,0.58) 0px, transparent 50%),
+        radial-gradient(at 53% 54%, hsla(67,82%,74%,0.51) 0px, transparent 50%),
+        radial-gradient(at 95% 98%, hsla(217,87%,60%,0.62) 0px, transparent 50%);
+    /* background-color: white; */
+    /* background: linear-gradient(30deg, #e9ebf0 0%, #ffffff 100%); */
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -172,7 +186,7 @@ button:hover {
     padding: 30px 0;
 }
 
-.coming-page-infohny:before {
+/* .coming-page-infohny:before {
     content: "";
     background: rgb(8 4 4 / 70%);
     position: absolute;
@@ -181,12 +195,12 @@ button:hover {
     left: 0;
     right: 0;
     z-index: -1;
-}
+} */
 
 .coming-page-infohny .alive-bottom{
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 0 10px;
 }
 .coming-page-infohny .header {
@@ -196,7 +210,12 @@ button:hover {
     grid-gap: 0 10px;
 }
 a.brand-logo img {
-    max-width: 100%;
+    max-width: 90px;
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 .coming-page-infohny .top-hny-logo {
     padding: 2em 0;
@@ -213,42 +232,20 @@ a.brand-logo img {
     display: grid;
 }
 
-a.alive-btn {
-    font-size: 18px;
-    border: 1px solid #fca311;
-    outline: none;
-    padding: 0 40px;
-    line-height: 54px;
-    border-radius: 6px;
-    color: #fff;
-    background: #fca311;
-    transition: .3s ease-in-out;
-    height: 60px;
-    display: inline-block;
-    font-weight: 600;
-}
-a.alive-btn:hover{
-    opacity:0.8;
-}
-a.brand-logo{
-    font-size: 38px;
-    font-weight: 700;
-    color: #fff;
-}
 .coming-page-infohny h1 {
     margin: 0;
     font-size: 100px;
-    font-weight: 700;
-    color: #fff;
+    font-weight: 500;
+    color: var(--primary-color);
     line-height: 110px;
     text-transform: capitalize;
     margin-bottom: 16px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 .coming-page-infohny h6{
     font-size:20px;
-    font-weight: 700;
-    color: #fff;
+    font-weight: 600;
+    color: var(--secondary-color);
     line-height:30px;
     text-transform: capitalize;
     margin-bottom:20px;
@@ -256,60 +253,45 @@ a.brand-logo{
 h2.parahny {
     line-height: 26px;
     opacity: 0.9;
-    color: #fca311;
+    color: var(--primary-color);
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 2px;
 }
 
-.coming-page-infohny .countdown {
-    display: table;
-    font-size: 28px;
-    font-weight: 500;
-}
-
-.coming-page-infohny .countdown>div {
-    float: left;
-    min-width:80px;
-    margin: 0px 20px 20px 0px;
-    font-size:38px;
-    font-weight:700;
-    color: #fff;
-}
-
-.coming-page-infohny .countdown>div:last-child {
-    border-right: none;
-}
 .subscribe-wthree-field4 {
     margin-top: 30px;
 }
 .coming-page-infohny p {
-    color: #fff;
+    color: var(--secondary-color);
     letter-spacing: 2px;
     font-size: 20px;
     font-weight: 400;
     text-transform:capitalize;
 }
 
-.coming-page-infohny .countdown span {
-    position: relative;
-    display: block;
-    font-size: 13px;
-    text-align: left;
-    text-transform: capitalize;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #f2f2f2;
-}
 .copyright-footer p {
     font-size: 16px;
     letter-spacing: 1px;
 }
 .copyright-footer {
-    text-align: left;
+    text-align: center;
 }
+
+@media only screen and (min-width: 1200px) {
+    .copyright-footer{
+        margin-top: 3em;
+    }    
+}
+
+@media only screen and (max-width: 563px) {
+    .copyright-footer{
+        margin-top: 5em;
+    }    
+}
+  
 .copyright-footer p a{
-    color:#fff;
+    color:var(--secondary-color);
 }
 ul.social li {
     display: inline-block;
@@ -317,7 +299,7 @@ ul.social li {
 }
 
 ul.social li a {
-    color: #fff;
+    color: var(--secondary-color);
     display: inline-block;
     background: none;
     text-align: center;
@@ -383,12 +365,6 @@ ul.social li a span {
 }
 
 @media (max-width: 600px) {
-    .coming-page-infohny .countdown>div {
-        float: left;
-        min-width: 100px;
-        margin:0px 10px 30px 0px;
-        font-size: 40px;
-    }
     .coming-page-infohny h2 {
         margin: 0;
         font-size: 14px;
@@ -405,13 +381,6 @@ ul.social li a span {
 }
 
 @media (max-width: 480px) {
-    .coming-page-infohny .countdown>div {
-        min-width:80px;
-    }
-    .coming-page-infohny .countdown>div {
-        margin:0px 6px 30px 0px;
-        font-size: 34px;
-    }
     .coming-page-infohny h1 {
         font-size: 44px;
         line-height: 54px;
@@ -441,16 +410,7 @@ ul.social li a span {
 
 @media (max-width: 384px) {
     .coming-page-infohny .coming-block {
-        margin: 50px auto 30px;
-    }
-
-    .coming-page-infohny .countdown span {
-        font-size: 10px;
-        letter-spacing: 1px;
-    }
-
-    .coming-page-infohny .countdown>div {
-        font-size: 30px;
+        margin: 10px auto 30px;
     }
 }
 
@@ -468,12 +428,5 @@ ul.social li a span {
         font: size 40px;
         line-height: 50px;
         margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 320px) {
-    .coming-page-infohny .countdown>div {
-        font-size: 22px;
-        min-width: 68px;
     }
 }
